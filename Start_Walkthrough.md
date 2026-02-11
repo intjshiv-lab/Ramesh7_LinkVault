@@ -191,4 +191,4 @@ cd frontend && npm install && npm run dev
 
 ---
 
-*Ramesh7_LinkVault v2.0 © 2026 — Created by Ramesh Choudhary, IIT Kharagpur*
+*Ramesh7_LinkVault © 2026 — Created by Ramesh Choudhary, IIT Kharagpur*
