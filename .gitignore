@@ -149,24 +149,5 @@ vite.config.ts.timestamp-*
 # Uploaded files (runtime data)
 uploads/
 
-# Development artifacts (HTML reports, PDFs)
-*.html
-!frontend/index.html
-!frontend/src/**/*.html
-
-# Assignment PDF
-*.pdf
-
-# Draft/working notes
-Readme_Ra/
-
-# Old screenshots folder (moved to docs/screenshots/)
-screenshots/
-
-# Demo recordings
-*.webp
-
-# Walkthrough markdown (dev artifact)
-walkthrough.md
-
-# HOW_TO_START is kept intentionally
+# Personal retention files (not for GitHub)
+Shiv/
