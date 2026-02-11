@@ -18,7 +18,7 @@ Think of it like a private Pastebin - you paste some text or drop a file, get a 
 
 ## System Architecture
 
-*Made with Mermaid*
+
 
 ![System Architecture](./docs/architecture.png)
 
@@ -187,19 +187,19 @@ Fields:
 
 ### Upload Flow
 
-*Made with Mermaid*
+
 
 ![Upload Flow](./docs/upload_flow.png)
 
 ### View Content Flow
 
-*Made with Mermaid*
+
 
 ![View Content Flow](./docs/view_flow.png)
 
 ### Background Cleanup Job
 
-*Made with Mermaid*
+
 
 ![Cleanup Flow](./docs/cleanup_flow.png)
 
@@ -207,7 +207,6 @@ Fields:
 
 ## Database Schema
 
-*Made with Mermaid*
 
 ![Database Schema](./docs/database_schema.png)
 
