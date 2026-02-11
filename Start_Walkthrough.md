@@ -78,7 +78,7 @@ Open your browser and go to:
 ## App Screenshots
 
 ### Landing Page — Upload Interface
-![Landing Page](./docs/screenshots/landing_page.png)
+![Landing Page](./docs/screenshots/Landing_Full.jpg)
 
 The main upload interface with:
 - Text/File toggle
@@ -91,7 +91,7 @@ The main upload interface with:
 ---
 
 ### Success Page — Link Generated
-![Success Page](./docs/screenshots/success_page.png)
+![Success Page](./docs/screenshots/Creation.jpg)
 
 After uploading, you get:
 - A unique shareable URL
@@ -103,7 +103,7 @@ After uploading, you get:
 ---
 
 ### View Page — Shared Content
-![View Page](./docs/screenshots/view_page.png)
+![View Page](./docs/screenshots/Login_User_view.jpg)
 
 When someone opens your link:
 - Displays text content in a code block
@@ -111,6 +111,17 @@ When someone opens your link:
 - Shows Created & Expires timestamps
 - Download button for file uploads
 - Password prompt if protected
+
+---
+
+### User Dashboard
+![User Dashboard](./docs/screenshots/User_links.jpg)
+
+Logged-in users can:
+- View all their active uploads
+- Track view counts
+- Delete links directly
+
 
 ---
 
