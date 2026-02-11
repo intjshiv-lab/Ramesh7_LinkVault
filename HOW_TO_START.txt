@@ -1,0 +1,155 @@
+================================================================================
+                    RAMESH7_LINKVAULT v2.0 - HOW TO START THE APP
+================================================================================
+
+This guide explains how to start the upgraded LinkVault application with all
+new features: Authentication, Password Protection, One-Time View, Max Views.
+
+--------------------------------------------------------------------------------
+PREREQUISITES
+--------------------------------------------------------------------------------
+- Node.js installed (version 18 or higher recommended)
+- npm (comes with Node.js)
+
+--------------------------------------------------------------------------------
+NEW FEATURES IN v2.0
+--------------------------------------------------------------------------------
+✅ User Authentication (Register/Login)
+✅ Password-Protected Links
+✅ One-Time View Links (self-destruct after viewing)
+✅ Maximum View Count
+✅ Manual Delete with Token
+✅ File Size & Type Validation
+✅ User Dashboard (My Links)
+✅ Enhanced Background Cleanup
+
+--------------------------------------------------------------------------------
+STEP 1: START THE BACKEND SERVER
+--------------------------------------------------------------------------------
+
+1. Open Terminal
+2. Navigate to the backend folder:
+   
+   cd "/Users/raman/Desktop/Build_Ra/Full Stack  AntiGravity /backend"
+
+3. Install dependencies (first time only):
+   
+   npm install
+
+4. Start the backend server:
+   
+   npm start
+
+5. You should see:
+   🔐 LinkVault API Server v2.0 running on http://localhost:3001
+   📦 Features: Auth, Password Protection, One-Time View, Max Views
+   🔄 Cleanup job started (runs every 60s)
+
+   Keep this terminal window open!
+
+--------------------------------------------------------------------------------
+STEP 2: START THE FRONTEND (in a NEW terminal window)
+--------------------------------------------------------------------------------
+
+1. Open a NEW Terminal window (Command + N)
+2. Navigate to the frontend folder:
+   
+   cd "/Users/raman/Desktop/Build_Ra/Full Stack  AntiGravity /frontend"
+
+3. Install dependencies (first time only):
+   
+   npm install
+
+4. Start the frontend development server:
+   
+   npm run dev
+
+5. You should see:
+   VITE ready
+   ➜  Local:   http://localhost:5173/
+
+   Keep this terminal window open!
+
+--------------------------------------------------------------------------------
+STEP 3: OPEN THE APP
+--------------------------------------------------------------------------------
+
+Open your browser and go to:
+
+   http://localhost:5173/
+
+Your LinkVault app is now running! 🎉
+
+--------------------------------------------------------------------------------
+NEW API ENDPOINTS
+--------------------------------------------------------------------------------
+
+Authentication:
+  POST /api/auth/register     - Register new user
+  POST /api/auth/login        - Login user
+  POST /api/auth/logout       - Logout
+  GET  /api/auth/me           - Get current user
+
+Upload:
+  POST /api/upload            - Upload with options:
+                                - password (string)
+                                - oneTimeView (boolean)
+                                - maxViews (number)
+
+Content:
+  GET    /api/content/:id         - Get content (checks password)
+  POST   /api/content/:id/verify  - Verify password
+  GET    /api/content/:id/download - Download file
+  DELETE /api/content/:id         - Delete with token
+
+Dashboard (requires auth):
+  GET /api/dashboard/uploads  - Get user's uploads
+  GET /api/dashboard/stats    - Get user statistics
+
+--------------------------------------------------------------------------------
+STOPPING THE SERVERS
+--------------------------------------------------------------------------------
+
+To stop either server, go to its terminal window and press:
+
+   Ctrl + C
+
+--------------------------------------------------------------------------------
+QUICK START (Copy-Paste Commands)
+--------------------------------------------------------------------------------
+
+Terminal 1 (Backend):
+   cd "/Users/raman/Desktop/Build_Ra/Full Stack  AntiGravity /backend" && npm start
+
+Terminal 2 (Frontend):
+   cd "/Users/raman/Desktop/Build_Ra/Full Stack  AntiGravity /frontend" && npm run dev
+
+--------------------------------------------------------------------------------
+PORTS USED
+--------------------------------------------------------------------------------
+
+| Service  | Port | URL                    |
+|----------|------|------------------------|
+| Backend  | 3001 | http://localhost:3001  |
+| Frontend | 5173 | http://localhost:5173  |
+
+--------------------------------------------------------------------------------
+TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+❌ "localhost refused to connect"
+   → Make sure both backend AND frontend servers are running
+
+❌ "Port already in use"
+   → Another process is using the port. Stop it or use a different port
+
+❌ "Module not found"
+   → Run `npm install` in the respective folder
+
+❌ "Invalid or expired token"
+   → Your login session has expired. Please log in again.
+
+================================================================================
+                          Ramesh7_LinkVault v2.0 © 2026
+             Now with Auth, Password Protection & Self-Destruct Links!
+================================================================================

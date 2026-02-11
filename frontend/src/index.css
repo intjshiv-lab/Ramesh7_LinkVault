@@ -1,0 +1,329 @@
+@import "tailwindcss";
+
+/* Premium Pastel Design System - Ramesh7_LinkVault */
+:root {
+  /* Pastel Colors */
+  --color-primary: #a855f7;
+  --color-primary-light: #c084fc;
+  --color-accent: #ec4899;
+  --color-accent-light: #f472b6;
+  --color-success: #10b981;
+
+  /* Background */
+  --color-bg: #faf5ff;
+  --color-card: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(0, 0, 0, 0.05);
+
+  /* Text */
+  --color-text-dark: #1e1b4b;
+  --color-text: #4b5563;
+  --color-text-muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  color: var(--color-text-dark);
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(251, 207, 232, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(196, 181, 253, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(165, 243, 252, 0.2) 0%, transparent 60%),
+    linear-gradient(180deg, #fdf4ff 0%, #faf5ff 50%, #f0f9ff 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--color-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+/* Premium Button */
+.btn-primary {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: white;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 15px 35px -10px rgba(168, 85, 247, 0.5);
+  font-size: 15px;
+  letter-spacing: -0.2px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px -10px rgba(168, 85, 247, 0.6);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Input Styles */
+.input-field {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 16px 20px;
+  color: var(--color-text-dark);
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
+  background: white;
+}
+
+.input-field::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Textarea */
+.textarea-field {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: 20px;
+  color: var(--color-text-dark);
+  font-size: 14px;
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+  min-height: 200px;
+  resize: vertical;
+  transition: all 0.3s ease;
+  line-height: 1.7;
+}
+
+.textarea-field:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
+  background: white;
+}
+
+.textarea-field::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Toggle Switch */
+.toggle-container {
+  display: flex;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 14px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 11px;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+}
+
+/* File Upload Zone */
+.file-drop-zone {
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.file-drop-zone:hover,
+.file-drop-zone.dragover {
+  border-color: var(--color-primary);
+  background: rgba(168, 85, 247, 0.05);
+}
+
+/* Link Display */
+.link-display {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  word-break: break-all;
+}
+
+.link-display a {
+  color: var(--color-primary);
+  text-decoration: none;
+  flex: 1;
+  font-family: 'SF Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.link-display a:hover {
+  text-decoration: underline;
+}
+
+/* Copy Button */
+.copy-btn {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
+  transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--color-success);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Loader */
+.loader {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(168, 85, 247, 0.2);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Content Display */
+.content-display {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: 24px;
+  font-family: 'SF Mono', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 350px;
+  overflow-y: auto;
+  color: var(--color-text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.3);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+  color: var(--color-primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Success & Error States */
+.error-container,
+.success-container {
+  text-align: center;
+  padding: 40px 20px;
+}
