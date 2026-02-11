@@ -1,4 +1,4 @@
-# 🚀 How to Start Ramesh7_LinkVault v2.0
+# 🚀 How to Start Ramesh7_LinkVault
 
 > Secure text & file sharing with Auth, Password Protection, One-Time View & Self-Destruct Links
 
